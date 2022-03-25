@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react'
+<<<<<<< HEAD
 import { DataGrid } from '@material-ui/data-grid'
+=======
+import { DataGrid } from '@mui/x-data-grid'
+>>>>>>> e05d77a08d8aabac622ae8c6ac70cb0eaa1ad704
 
 const columns = [
   { field: 'id', headerName: 'ID' },
@@ -11,9 +15,12 @@ const DataTable = () => {
 
   const [tableData, setTableData] = useState([])
 
+<<<<<<< HEAD
   const [rows, setRows] = useState(tableData);
   const [deletedRows, setDeletedRows] = useState([]);
 
+=======
+>>>>>>> e05d77a08d8aabac622ae8c6ac70cb0eaa1ad704
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((data) => data.json())
@@ -21,7 +28,11 @@ const DataTable = () => {
 
   }, [])
 
+<<<<<<< HEAD
   console.log(tableData);
+=======
+  console.log(tableData)
+>>>>>>> e05d77a08d8aabac622ae8c6ac70cb0eaa1ad704
 
   return (
     <div style={{ height: 700, width: '100%' }}>
@@ -29,6 +40,7 @@ const DataTable = () => {
         rows={tableData}
         columns={columns}
         pageSize={12}
+<<<<<<< HEAD
         checkboxSelection
         onSelectionModelChange={({ selectionModel }) => {
           const rowIds = selectionModel.map(rowId => parseInt(String(rowId), 10));
@@ -36,6 +48,8 @@ const DataTable = () => {
           setDeletedRows(rowsToDelete);
           console.log(deletedRows);
         }}
+=======
+>>>>>>> e05d77a08d8aabac622ae8c6ac70cb0eaa1ad704
       />
     </div>
   )
